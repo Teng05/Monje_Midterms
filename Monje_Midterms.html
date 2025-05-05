@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+
+<style>
+
+    section{
+        min-height: 100vh;
+        padding: 60px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: linear-gradient(#17EAD9, #6078EA);
+    }
+    .navbar-brand img{
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .nav-item a {
+     font-weight: bold;
+    }
+
+    .home{
+        padding: 100px 20px;
+        text-align: center;
+    }
+    .home h2{
+        margin-top: 10px;
+    }
+    .home h5{
+        margin-top: 5px;
+    }
+    .home-img{
+        width: 400px;
+        max-width: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-left: 50px;
+        animation: float 3s ease-in-out infinite;
+    }
+ 
+    @keyframes float {
+        0%, 100%{
+            transform: translateY(0);
+        }
+        50%{
+            transform: translateY(10px);
+        }
+    }
+        
+    .ab-pic {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border-radius: 10px;
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+    .about .row{
+    align-items: center;
+    }
+
+    .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 150px;
+  padding-top: 40px;
+}
+
+.card {
+  position: relative;
+  width: 150%;
+  max-width: 300px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 128, 255, 0.8));
+  color: white;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .card-text {
+      font-size: 16px;
+    }
+    
+    #more {
+  padding: 80px 20px;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+</style>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"> <img src="./Pics/logo.jpg" alt="logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Education">Education</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Contact">Contact</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!---- Home ------>
+      <section class="home" id="home">
+        <div class="container d-flex align-item-center-justify-content-between" style="height: 100vh">
+            <div class="text-content">
+                <h5 class="display-4 mb-3 animate-text"> Hi I'm <br>
+                <span style="font-weight: bold;">Paul Vincent M. Monje</span></h5>
+
+                <h2 style="font-style: italic;">A Pasaionate</h2>
+                <h2 style="font-style: italic;">Web Developer & Programmer <br></h2>
+                <h2>  </h2>
+                <button type="button" class="btn btn-primary" >Learn More</button>
+            </div>
+
+            <div class="img-content">
+                <img src="./Pics/hm.jpg" alt="home-pic" class="home-img">
+            </div>
+        </div>
+      </section>
+
+
+      <!---- About Me ------>
+      <section id="about">
+        <div class="container">
+          <div class="row align-items-center">
+            
+            <!-- Left side: Picture -->
+            <div class="col-md-6 text-center">
+              <img src="./Pics/pic.jpg" alt="Profile Picture" class="ab-pic">
+            </div>
+            
+            <!-- Right side: Text -->
+            <div class="col-md-6">
+              <h3>About Me</h3>
+              <p style="font-size: 16px;">aa.</p>
+            <a href="#More_info" class="btn btn-primary btn-lg">Know more?</a>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+      <!---- More Info ------>
+      <section class="more" id="more">
+        <div class="more">
+            <h2 class="section-title">More About Me</h2>
+            <div class="card-container">
+              <!-- Card 1 -->
+              <div class="card">
+                <img src="./Pics/BA.jpg" alt="Badminton" />
+                <div class="overlay">
+                  <h3>Badminton</h3>
+                  <p>Since I was a kid I like playing Badminton. Badminton has not only improved my physical health but also instilled in me values like discipline, teamwork, and resilience. It’s a sport that constantly challenges my limits and reminds me to stay focused and committed both on and off the court.</p>
+                </div>
+              </div>
+            
+              <!-- Card 2 -->
+              <div class="card">
+                <img src="./Pics/pa.jpeg" alt="Couple" />
+                <div class="overlay">
+                  <h3>Memories</h3>
+                  <p>Every moment with my partner feels like a gentle reminder that I’m not alone through laughter, quiet conversations, or just standing side by side. These memories hold a special kind of magic, showing me the beauty of love, support, and simply being there for one another. In a world that often rushes by, these moments are my anchor, reminding me to cherish the simple joys and the deep connections we share.</p>
+                  
+                </div>
+              </div>
+            
+              <!-- Card 3 -->
+              <div class="card">
+                <img src="./Pics/ml.jpg" alt="Online Game" />
+                <div class="overlay">
+                  <h3>Mobile Legends</h3>
+                  <p>Just like badminton I also love to play online games like Mobile Legends, it’s a way of expressing strategy, leadership, and confidence. Just like fashion, it allows me to show who I am, bond with friends, and enjoy the thrill of collaboration and competition.
+                </p>
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+      <!---- Education ------>
+      <section class="Education" id="Education">
+        <div class="more">
+            <h2 class="section-title">More About Me</h2>
+            <div class="card-container">
+              <!-- LPCA -->
+              <div class="card">
+                <img src="./Pics/lpca.jpg" alt="Badminton" />
+                <div class="overlay">
+                  <h3>Badminton</h3>
+                  <p>Since I was a kid I like playing Badminton. Badminton has not only improved my physical health but also instilled in me values like discipline, teamwork, and resilience. It’s a sport that constantly challenges my limits and reminds me to stay focused and committed both on and off the court.</p>
+                </div>
+              </div>
+            
+              <!-- NU -->
+              <div class="card">
+                <img src="./Pics/nu.png" alt="Couple" />
+                <div class="overlay">
+                  <h3>Memories</h3>
+                  <p>Every moment with my partner feels like a gentle reminder that I’m not alone through laughter, quiet conversations, or just standing side by side. These memories hold a special kind of magic, showing me the beauty of love, support, and simply being there for one another. In a world that often rushes by, these moments are my anchor, reminding me to cherish the simple joys and the deep connections we share.</p>
+                  
+                </div>
+              </div>
+            
+        </div>
+      </section>
+
+      <!---- Contact ------>
+      <section class="Contact" id="Contact">
+        <div class="container d-flex align-item-center-justify-content-between" style="height: 100vh">
+            <div class="text-content">
+                <h5 class="display-4 mb-3 animate-text"> Hi I'm <br>
+                <span style="font-weight: bold;">Paul Vincent M. Monje</span></h5>
+
+                <h2 style="font-style: italic;">A Pasaionate</h2>
+                <h2 style="font-style: italic;">Web Developer & Programmer <br></h2>
+                <button type="button" class="btn btn-primary" >Learn More</button>
+            </div>
+
+            <div class="img-content">
+                <img src="./Pics/hm.jpg" alt="home-pic" class="home-img">
+            </div>
+        </div>
+      </section>
+    
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</body>
+</html>
