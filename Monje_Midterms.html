@@ -27,6 +27,12 @@
     .nav-item a {
      font-weight: bold;
     }
+    .navbar {
+  background: linear-gradient(to right, #17ead9, #6078ea);
+}
+
+
+    
 
     .home{
         padding: 100px 20px;
@@ -46,6 +52,7 @@
         margin-left: 50px;
         animation: float 3s ease-in-out infinite;
     }
+    
  
     @keyframes float {
         0%, 100%{
@@ -54,6 +61,36 @@
         50%{
             transform: translateY(10px);
         }
+    }
+
+    .type {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 3px solid #4C7766;
+        font-size: 2rem;
+        animation: typing 8s steps(30, end) infinite, blink 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+        0% {
+        width: 0;
+    }
+    50% {
+        width: 26ch; /* Adjust depending on text length */
+    }
+    100% {
+        width: 0;
+    }
+    }
+
+    @keyframes blink {
+        0%, 100% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: black;
+    }
     }
         
     .ab-pic {
@@ -114,6 +151,21 @@
   text-align: center;
 }
 
+footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .nav-item a {
+     font-weight: bold;
+    }
+    .navbar {
+  background-color: #00ffff ;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .card-title {
       font-size: 20px;
       font-weight: bold;
@@ -131,10 +183,16 @@
   opacity: 1;
 }
 
+@media (max-width: 768px) {
+      .home h2, .home h4, .section-title {
+        font-size: 24px;
+      }
+}
+
 </style>
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"> <img src="./Pics/logo.jpg" alt="logo"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -168,9 +226,9 @@
                 <span style="font-weight: bold;">Paul Vincent M. Monje</span></h5>
 
                 <h2 style="font-style: italic;">A Pasaionate</h2>
-                <h2 style="font-style: italic;">Web Developer & Programmer <br></h2>
+                <h2 style="font-style: italic;" class="type">Web Developer & Programmer <br></h2>
                 <h2>  </h2>
-                <button type="button" class="btn btn-primary" >Learn More</button>
+                <a href="#about" class="btn btn-primary btn-lg">Learn More</a>
             </div>
 
             <div class="img-content">
@@ -193,8 +251,12 @@
             <!-- Right side: Text -->
             <div class="col-md-6">
               <h3>About Me</h3>
-              <p style="font-size: 16px;">aa.</p>
-            <a href="#More_info" class="btn btn-primary btn-lg">Know more?</a>
+              <p style="font-size: 16px;">I'm Paul Vincent M. Monje, i'm currently 2nd year college in National University Lipa
+                taking Bachelor of Science in Information Technology, major in Mobile and Web Application.
+               Being an IT student, i Do believe that in this field I must understand, learn and stay updated with the latest
+             technologies. Thats why I am a person whose ambition is more desirable so that I can be more technologically
+           advance and hvae a positive vision for my future.</p>
+            <a href="#more" class="btn btn-primary btn-lg">Know more?</a>
             </div>
       
           </div>
@@ -203,7 +265,7 @@
       <!---- More Info ------>
       <section class="more" id="more">
         <div class="more">
-            <h2 class="section-title">More About Me</h2>
+            <h2 class="section-title" style="text-align: center;">More About Me</h2>
             <div class="card-container">
               <!-- Card 1 -->
               <div class="card">
@@ -218,7 +280,7 @@
               <div class="card">
                 <img src="./Pics/pa.jpeg" alt="Couple" />
                 <div class="overlay">
-                  <h3>Memories</h3>
+                  <h3>Partner</h3>
                   <p>Every moment with my partner feels like a gentle reminder that I’m not alone through laughter, quiet conversations, or just standing side by side. These memories hold a special kind of magic, showing me the beauty of love, support, and simply being there for one another. In a world that often rushes by, these moments are my anchor, reminding me to cherish the simple joys and the deep connections we share.</p>
                   
                 </div>
@@ -238,59 +300,75 @@
       </section>
       <!---- Education ------>
       <section class="Education" id="Education">
-        <div class="more">
-            <h2 class="section-title">More About Me</h2>
+        <div class="more"> 
+            <h2 class="section-title" style="text-align: center;">Education</h2>
             <div class="card-container">
               <!-- LPCA -->
               <div class="card">
-                <img src="./Pics/lpca.jpg" alt="Badminton" />
+                <img src="./Pics/lpca.jpg" alt="LPCA" />
                 <div class="overlay">
-                  <h3>Badminton</h3>
-                  <p>Since I was a kid I like playing Badminton. Badminton has not only improved my physical health but also instilled in me values like discipline, teamwork, and resilience. It’s a sport that constantly challenges my limits and reminds me to stay focused and committed both on and off the court.</p>
-                </div>
+                  <h1>Elementary</h1>
+                  <h3>2011 - 2017 </h3>
+                  <h1>HighSchool</h1>
+                  <h3>2017 - 2023</h3>
+              </div>
               </div>
             
               <!-- NU -->
               <div class="card">
-                <img src="./Pics/nu.png" alt="Couple" />
+                <img src="./Pics/nu.png" alt="NU" />
                 <div class="overlay">
-                  <h3>Memories</h3>
-                  <p>Every moment with my partner feels like a gentle reminder that I’m not alone through laughter, quiet conversations, or just standing side by side. These memories hold a special kind of magic, showing me the beauty of love, support, and simply being there for one another. In a world that often rushes by, these moments are my anchor, reminding me to cherish the simple joys and the deep connections we share.</p>
-                  
+                  <h1>College</h1>
+                  <h3>2023 - Present</h3>
+                  <h3>Bachelor of Science in Information Technology</h3>
                 </div>
               </div>
-            
+           
+        </div>
         </div>
       </section>
 
       <!---- Contact ------>
-      <section class="Contact" id="Contact">
-        <div class="container d-flex align-item-center-justify-content-between" style="height: 100vh">
-            <div class="text-content">
-                <h5 class="display-4 mb-3 animate-text"> Hi I'm <br>
-                <span style="font-weight: bold;">Paul Vincent M. Monje</span></h5>
 
-                <h2 style="font-style: italic;">A Pasaionate</h2>
-                <h2 style="font-style: italic;">Web Developer & Programmer <br></h2>
-                <button type="button" class="btn btn-primary" >Learn More</button>
-            </div>
-
-            <div class="img-content">
-                <img src="./Pics/hm.jpg" alt="home-pic" class="home-img">
-            </div>
+<section class="contact-section d-flex justify-content-center align-items-center" id="Contact">
+    <div class="contact-box bg-dark text-white p-5 rounded-4 shadow-lg text-center">
+      <h2 class="mb-4">Get in Touch</h2>
+      <form class="row g-3">
+        <div class="col-6">
+          <input type="text" class="form-control" placeholder="Full Name" required>
         </div>
-      </section>
+        <div class="col-6">
+          <input type="email" class="form-control" placeholder="Email" required>
+        </div>
+        <div class="col-6">
+          <input type="text" class="form-control" placeholder="Phone Number" required>
+        </div>
+        <div class="col-6">
+          <input type="text" class="form-control" placeholder="Subject" required>
+        </div>
+        <div class ="text-center">
+
+            <textarea id= "message" class="form-control" rows="4" placeholder="Write your message"></textarea>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </div>
+      </form>
+  
+      <!-- Socials -->
+      <div class="mt-4">
+        <p>Email: <a class="text-info">paulmonje123@mail.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p style="color: black;">&copy; 2025 Paul Vincent M. Monje. All rights reserved.</p>
+    </div>
+  </footer>
+  
     
-
-
-
-
-
-
-
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
 </body>
